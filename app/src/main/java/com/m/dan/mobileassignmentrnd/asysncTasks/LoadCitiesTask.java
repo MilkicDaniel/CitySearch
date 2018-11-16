@@ -38,9 +38,12 @@ public class LoadCitiesTask extends AsyncTask<Void, Void, ArrayList<City>> {
 
     @Override
     protected ArrayList<City> doInBackground(Void... voids) {
-        ArrayList<City> cities = new Gson().fromJson(reader, new TypeToken<ArrayList<City>>() {}.getType());
-        taskListener.onComplete(cities);
-        return null;
+        return new Gson().fromJson(reader, new TypeToken<ArrayList<City>>() {}.getType());
     }
 
+    @Override
+    protected void onPostExecute(ArrayList<City> cities) {
+        super.onPostExecute(cities);
+        taskListener.onComplete(cities);
+    }
 }
