@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+import android.widget.EditText;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -25,7 +25,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
     public static final String BUNDLE_CITY = "BUNDLE_CITY";
     public static final String TAG = "MapFragment";
     private City city;
-    private SearchView searchView;
+    private EditText searchView;
 
     public MapFragment() { }
 

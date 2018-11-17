@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(getSupportFragmentManager().findFragmentByTag(CitiesDisplayFragment.TAG) == null){
 
-            CitiesViewModel model = ViewModelProviders.of(this).get(CitiesViewModel.class);
+            CitiesViewModel model = ViewModelProviders.of((MainActivity) this).get(CitiesViewModel.class);
             model.loadCitiesFromJson(this);
 
             getSupportFragmentManager().beginTransaction()

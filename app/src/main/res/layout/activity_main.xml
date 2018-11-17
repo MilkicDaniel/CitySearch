@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -16,27 +17,28 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:layout_weight="1"
-            android:paddingTop="7dp"
-            android:paddingBottom="7dp"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/app_name">
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <SearchView
+            <EditText
                 android:id="@+id/toolbar_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="11dp"
-                android:layout_marginRight="11dp"
-                android:iconifiedByDefault="false"
-                android:maxWidth="10000dp"
-                android:queryHint="Search"
-                android:textAllCaps="true"
-                android:textColor="@color/colorAccent" />
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rounded_search"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/editText"
+                android:textColorHint="@color/hintColor"
+                android:theme="@style/AppTheme.DarkEditText" />
 
         </android.support.v7.widget.Toolbar>
+
 
     </android.support.design.widget.AppBarLayout>
 

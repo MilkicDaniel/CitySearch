@@ -26,7 +26,7 @@ public class LoadCitiesTask extends AsyncTask<Void, Void, ArrayList<City>> {
         this.taskListener = taskListener;
 
         try {
-            reader = new InputStreamReader(context.getAssets().open("test.json"));
+            reader = new InputStreamReader(context.getAssets().open("cities.json"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
