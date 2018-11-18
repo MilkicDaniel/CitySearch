@@ -28,7 +28,10 @@ public class CitiesViewModelTest  {
         assertEquals(0,  test.Search().size());
         test = new CitySearchTask(cities, "", null);
         assertEquals(4,  test.Search().size());
-
+        test = new CitySearchTask(cities, "abu al matamir", null);
+        assertEquals("abu al matamir",  test.Search().get(0).getName().toLowerCase());
+        test = new CitySearchTask(cities, "abu al matamir_2", null);
+        assertEquals(0,  test.Search().size());
     }
 
 }
