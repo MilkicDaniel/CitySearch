@@ -6,7 +6,6 @@ import android.os.Bundle;
 import com.m.dan.mobileassignmentrnd.fragments.CitiesDisplayFragment;
 import com.m.dan.mobileassignmentrnd.viewModel.CitiesViewModel;
 
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(getSupportFragmentManager().findFragmentByTag(CitiesDisplayFragment.TAG) == null){
 
-            CitiesViewModel model = ViewModelProviders.of((MainActivity) this).get(CitiesViewModel.class);
+            CitiesViewModel model = ViewModelProviders.of(this).get(CitiesViewModel.class);
             model.loadCitiesFromJson(this);
 
             getSupportFragmentManager().beginTransaction()

@@ -41,11 +41,9 @@ public class CitiesViewModel extends ViewModel {
         }).execute();
     }
 
-
     public LiveData<ArrayList<City>> getSearchResults(){
         return searchResults;
     }
-
 
     public void openMapForCity(Context context, City city) {
 
@@ -62,8 +60,7 @@ public class CitiesViewModel extends ViewModel {
 
     }
 
-
-    public void search(String tmpSearchTerm){
+    public void search(String tmpSearchTerm) {
 
         final String searchTerm = tmpSearchTerm.toLowerCase();
 
@@ -89,6 +86,7 @@ public class CitiesViewModel extends ViewModel {
         }
 
         citySearchTask = new CitySearchTask(tmpList, searchTerm, new CitySearchTask.TaskListener() {
+
             @Override
             public void onComplete(ArrayList<City> cities) {
                 searchResults.getValue().clear();
@@ -101,6 +99,7 @@ public class CitiesViewModel extends ViewModel {
         });
 
         citySearchTask.execute();
+
     }
 
 

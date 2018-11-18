@@ -25,6 +25,11 @@ public class CitySearchTask extends AsyncTask<Void, Void, ArrayList<City>> {
 
     @Override
     protected ArrayList<City> doInBackground(Void... voids) {
+        return Search();
+    }
+
+
+    public ArrayList<City> Search() {
 
         ArrayList<City> tmp = new ArrayList<>();
 
@@ -78,6 +83,7 @@ public class CitySearchTask extends AsyncTask<Void, Void, ArrayList<City>> {
 
         return tmp;
     }
+
 
     @Override
     protected void onPostExecute(ArrayList<City> cities) {
